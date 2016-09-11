@@ -81,41 +81,48 @@ public class WeightedQuickUnion {
 
 	public static void main(String[] args) {
 
-		WeightedQuickUnion wqu = new WeightedQuickUnion(10);
-		System.out.println("No of connected components: " + wqu.count);
-		wqu.printId();
-		wqu.printSz();
+		WeightedQuickUnion qu = new WeightedQuickUnion(10);
 
-		wqu.Union(2, 3);
-		System.out.println("No of connected components: " + wqu.count);
-		wqu.printId();
-		wqu.printSz();
+		System.out.println("No of connected components: " + qu.count);
+		qu.printId();
 
-		wqu.Union(2, 9);
-		System.out.println("No of connected components: " + wqu.count);
-		wqu.printId();
-		wqu.printSz();
+		qu.Union(4, 3);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printId();
 
-		wqu.Union(7, 8);
-		System.out.println("No of connected components: " + wqu.count);
-		wqu.printId();
-		wqu.printSz();
+		qu.Union(3, 8);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printId();
 
-		wqu.Union(5, 6);
-		System.out.println("No of connected components: " + wqu.count);
-		wqu.printId();
-		wqu.printSz();
+		qu.Union(6, 5);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printId();
 
-		wqu.Union(5, 2);
-		System.out.println("No of connected components: " + wqu.count);
-		wqu.printId();
-		wqu.printSz();
+		qu.Union(9, 4);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printId();
 
-		wqu.Union(6, 8);
-		System.out.println("No of connected components: " + wqu.count);
-		wqu.printId();
-		wqu.printSz();
-		System.out.println(wqu.connected(2, 8));
+		qu.Union(2, 1);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printId();
 
+		qu.Union(5, 0);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printId();
+
+		qu.Union(7, 2);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printId();
+
+		qu.Union(6, 1);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printId();
+
+		qu.Union(1, 0);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printId();
+
+		System.out.println(qu.connected(2, 8));
+		qu.printSz();
 	}
 }
