@@ -32,8 +32,11 @@ public class QuickUnion {
 	}
 
 	public void Union(int p, int q) {
+		if (getRoot(q) == getRoot(p)) {
+			return;
+		}
 
-		id[p] = getRoot(q);
+		id[getRoot(p)] = getRoot(q);
 		count--;
 	}
 
@@ -51,23 +54,43 @@ public class QuickUnion {
 		System.out.println("No of connected components: " + qu.count);
 		qu.printid();
 
-		qu.Union(2, 3);
+		qu.Union(4, 3);
 		System.out.println("No of connected components: " + qu.count);
 		qu.printid();
 
-		qu.Union(2, 9);
+		qu.Union(3, 8);
 		System.out.println("No of connected components: " + qu.count);
 		qu.printid();
 
-		qu.Union(7, 8);
+		qu.Union(6, 5);
 		System.out.println("No of connected components: " + qu.count);
 		qu.printid();
 
-		qu.Union(5, 6);
+		qu.Union(9, 4);
 		System.out.println("No of connected components: " + qu.count);
 		qu.printid();
 
-		qu.Union(5, 2);
+		qu.Union(2, 1);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printid();
+
+		qu.Union(5, 0);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printid();
+
+		qu.Union(7, 2);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printid();
+
+		qu.Union(6, 1);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printid();
+
+		qu.Union(1, 0);
+		System.out.println("No of connected components: " + qu.count);
+		qu.printid();
+
+		qu.Union(6, 7);
 		System.out.println("No of connected components: " + qu.count);
 		qu.printid();
 	}
